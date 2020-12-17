@@ -18,7 +18,7 @@ This repo contains the starter code for this test, as well as the task descripti
 
 3. If you click in one product of the list, you should return the 6 products with nearest price in the same category.
 
-4. You should create a navBar to navigate to the differente pages of the website.
+4. You should create a navBar to navigate to the different pages of the website.
 
 
 ### Optional
