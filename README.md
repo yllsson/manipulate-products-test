@@ -37,8 +37,6 @@ Clone the repo, solve the tasks and push your code to a public GitHub repo. Send
 
 
 
-INSTALL INSTRUCTIONS
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
