@@ -3,7 +3,7 @@
 
 Hi applicant!
 
-This repo contains the starter code for Dagens job test, as well as the task description. The intention with this test is to have a look at how you solve a pretty straight forward problem, and then discuss it afterwards.
+This repo contains the starter code for this test, as well as the task description. The intention with this test is to have a look at how you solve a pretty straight forward problem, and then discuss it afterwards.
 
 - There is a file call db.js with a "database"-array with 1000 products. This is your database, you are _not_ supposed to set up any database service like MongoDB or write to file or persist data in any way.
 
@@ -12,7 +12,7 @@ This repo contains the starter code for Dagens job test, as well as the task des
 
 ### Tasks
 
-1. Users should be able to list all the products. It should be possible to filter by category, maximum and minimum price. You should have a size of 24 products per page. No libraries for the list of products of tables.  
+1. Users should be able to list all the products. It should be possible to filter by category, maximum and minimum price. You should have a size of 24 products per page. No libraries for the list/table of products.  
 
 2. Users should be able to create products from a form page. The products should be appended to the database.
 
