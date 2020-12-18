@@ -29,10 +29,12 @@ This repo contains the starter code for this test, as well as the task descripti
 
 * Style the website 
 
+* Use ES6 Features. 
+
 
 ### Delivery
 
-Clone the repo, solve the tasks and push your code to a public GitHub repo. Send a link to the solution to flo@archerknight.com.
+Clone the repo, solve the tasks and push your code to a public GitHub repo. Send a link to the solution to flo@archerknight.com. Think about what you've sent as the production/final version of the app.
 
 
 
