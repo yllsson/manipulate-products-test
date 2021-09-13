@@ -12,7 +12,7 @@ html {
 
 body,
 #root {
-  height: 100vh;
+  /* height: 100vh; */
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -29,12 +29,16 @@ body,
 }
 
 .App {
-  height: 100vh;
+  /* height: 100vh; */
   width: 100vw;
   flex-direction: column;
 }
 
 nav {
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
   border-bottom: 0.1rem solid #ececec;
   height: 6.4rem;
   width: 100%;
@@ -55,6 +59,22 @@ nav a:hover {
 }
 
 main {
-  flex: 1;
-  margin-top: 5rem;
+  flex-direction: column;
+  margin-top: 10rem;
+  width: 90vw;
+}
+
+.list {
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 50vw;
+}
+
+.listItem {
+  width: 20rem;
+  margin-top: 3rem;
+}
+
+.listItemDetails {
+  justify-content: space-between;
 }

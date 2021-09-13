@@ -12,7 +12,9 @@ function App() {
           About
         </a>
       </nav>
-      <main>
+      <main className='flex'>
+        <h1>List items go here:</h1>
+
         <List />
       </main>
     </div>
