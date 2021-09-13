@@ -71,14 +71,32 @@ main {
 }
 
 .listItem {
+  position: relative;
   border: 0.1rem solid #333;
   margin: 3rem;
   padding: 2rem;
-  height: 15rem;
-  width: 20rem;
+  height: 16rem;
+  width: 22rem;
 }
 
 .listItemDetails {
   justify-content: space-between;
   margin-top: 1rem;
+}
+
+.listItemButton {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+
+  background-color: navy;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+
+  cursor: pointer;
+}
+
+.listItemButton:hover {
+  background-color: #2f2feb;
 }
