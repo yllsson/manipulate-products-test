@@ -1,13 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import List from './components/List';
+import './styles/styles.css';
 
 function App() {
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>Hello world</p>
-      </header>
+    <div className='App flex'>
+      <nav className='flex'>
+        <a className='flex' href='#'>
+          Home
+        </a>
+        <a className='flex' href='#'>
+          About
+        </a>
+      </nav>
+      <main>
+        <List />
+      </main>
     </div>
   );
 }
