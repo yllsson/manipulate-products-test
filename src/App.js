@@ -13,7 +13,7 @@ function App() {
         </a>
       </nav>
       <main className='flex'>
-        <h1>List items go here:</h1>
+        <h1>Products:</h1>
 
         <List />
       </main>

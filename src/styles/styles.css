@@ -67,14 +67,18 @@ main {
 .list {
   flex-direction: row;
   flex-wrap: wrap;
-  width: 50vw;
+  width: 100%;
 }
 
 .listItem {
+  border: 0.1rem solid #333;
+  margin: 3rem;
+  padding: 2rem;
+  height: 15rem;
   width: 20rem;
-  margin-top: 3rem;
 }
 
 .listItemDetails {
   justify-content: space-between;
+  margin-top: 1rem;
 }
