@@ -20,23 +20,25 @@ This repo contains the starter code for this test, as well as the task descripti
 
 4. You should create a navBar to navigate to the different pages of the website.
 
+5. Minimum style of the website 
+
 
 ### Optional
 
 * Ability to remain the filters after refreshing the website.
 
+* Ability to remain the filters after refreshing the website.
+
 * Option to clear all the filters at the same time 
 
-* Style the website 
-
 * Use ES6 Features. 
+
+* Add tests to the app. 
 
 
 ### Delivery
 
 Clone the repo, solve the tasks and push your code to a public GitHub repo. Send a link to the solution to flo@archerknight.com. Think about what you've sent as the production/final version of the app.
-
-
 
 
 # Getting Started with Create React App
