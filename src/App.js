@@ -9,7 +9,7 @@ function App() {
           Home
         </a>
         <a className='flex' href='#'>
-          About
+          Create Product
         </a>
       </nav>
       <main className='flex'>
