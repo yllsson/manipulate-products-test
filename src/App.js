@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 import List from './components/List';
 import products from './database/db';
+import CreateProductPage from './components/CreateProductPage';
 
 import './styles/styles.css';
 
 function App() {
   const [visibleProducts, setVisibleProducts] = useState(products);
-  const [filter, setFilter] = useState('all');
+  const [filter, setFilter] = useState('');
+  const [showProducts, setShowProducts] = useState(true);
 
   const selectFilter = (event) => {
     let filteredProducts = [];
 
-    if (event.target.value == 'all') {
+    if (!event.target.value) {
       filteredProducts = products;
     } else {
       filteredProducts = products.filter((product) => {
@@ -26,22 +28,25 @@ function App() {
   return (
     <div className='App flex'>
       <nav className='flex'>
-        <a className='flex' href='#'>
-          Home
-        </a>
-        <a className='flex' href='#'>
+        <button className='flex'>Home</button>
+        <button className='flex' onClick={createProduct}>
           Create Product
-        </a>
+        </button>
       </nav>
       <main className='flex'>
-        <h1>Products:</h1>
+        <section className='topOfMain flex'>
+          <h1>Products:</h1>
 
-        <select value={filter} onChange={selectFilter}>
-          <option value='all'>All products</option>
-          <option value='meat'>Meat</option>
-          <option value='fish'>Fish</option>
-          <option value='greens'>Greens</option>
-        </select>
+          <div className='filterContainer flex'>
+            <h3>Filter products:</h3>
+            <select value={filter} onChange={selectFilter} className='dropDown'>
+              <option value=''>All products</option>
+              <option value='meat'>Meat</option>
+              <option value='fish'>Fish</option>
+              <option value='greens'>Greens</option>
+            </select>
+          </div>
+        </section>
 
         <List products={visibleProducts} />
       </main>

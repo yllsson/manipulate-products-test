@@ -45,17 +45,18 @@ nav {
   z-index: 1;
 }
 
-nav a {
+nav button {
+  background-color: #fff;
+  border: none;
   color: #333;
   height: 100%;
   font-size: 2rem;
   padding: 1rem;
-  text-decoration: none;
 }
 
-nav a:hover {
+nav button:hover {
   background-color: #ececec;
-  text-decoration: none;
+
   color: #333;
 }
 
@@ -63,6 +64,19 @@ main {
   flex-direction: column;
   margin-top: 10rem;
   width: 90vw;
+}
+
+.topOfMain {
+  width: 90%;
+  justify-content: space-between;
+}
+
+.filterContainer h3 {
+  margin-right: 3rem;
+}
+
+.dropDown {
+  height: 4rem;
 }
 
 .list {
