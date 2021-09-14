@@ -25,6 +25,14 @@ function App() {
     setFilter(event.target.value);
   };
 
+  const createProduct = () => {
+    if (showProducts) {
+      setShowProducts(false);
+    } else {
+      setShowProducts(true);
+    }
+  };
+
   return (
     <div className='App flex'>
       <nav className='flex'>
@@ -48,7 +56,11 @@ function App() {
           </div>
         </section>
 
-        <List products={visibleProducts} />
+        {showProducts ? (
+          <List products={visibleProducts} />
+        ) : (
+          <CreateProductPage />
+        )}
       </main>
     </div>
   );
