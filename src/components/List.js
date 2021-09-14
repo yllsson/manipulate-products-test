@@ -3,8 +3,13 @@ import ListItem from './ListItem';
 
 const List = ({ products, setVisibleProducts }) => {
   const showSimilarProducts = (price) => {
-    let similarProducts = products.sort((a, b) => a.price - b.price);
-    console.log(similarProducts);
+    let sortedProducts = products.sort((a, b) => a.price - b.price);
+    const priceIndex = sortedProducts
+      .map((product) => product.price)
+      .indexOf(price);
+    console.log(price, priceIndex);
+
+    let similarProducts = sortedProducts.slice(priceIndex - 3, priceIndex + 3);
     setVisibleProducts(similarProducts);
   };
 
@@ -18,7 +23,7 @@ const List = ({ products, setVisibleProducts }) => {
             category={category}
             price={price}
             key={id}
-            onClick={showSimilarProducts}
+            showSimilarProducts={showSimilarProducts}
           />
         );
       })}
