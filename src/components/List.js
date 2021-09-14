@@ -1,13 +1,10 @@
 import React from 'react';
-import products from '../database/db';
 import ListItem from './ListItem';
 
-const List = () => {
-  const aFewTestProducts = products.slice(0, 24);
-
+const List = ({ products }) => {
   return (
     <div className='list flex'>
-      {aFewTestProducts.map(({ id, name, category, price }) => {
+      {products.map(({ id, name, category, price }) => {
         return (
           <ListItem
             id={id}
