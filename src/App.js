@@ -6,7 +6,8 @@ import CreateProductPage from './components/CreateProductPage';
 import './styles/styles.css';
 
 function App() {
-  const [visibleProducts, setVisibleProducts] = useState(products);
+  let productsClone = [...products];
+  const [visibleProducts, setVisibleProducts] = useState(productsClone);
   const [filter, setFilter] = useState('');
   const [showProducts, setShowProducts] = useState(true);
 
@@ -25,7 +26,7 @@ function App() {
     setFilter(event.target.value);
   };
 
-  const createProduct = () => {
+  const toggleShowProducts = () => {
     if (showProducts) {
       setShowProducts(false);
     } else {
@@ -33,11 +34,30 @@ function App() {
     }
   };
 
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+
+    const newProduct = {
+      id: event.target.productId.value,
+      name: event.target.productName.value,
+      category: event.target.productCategory.value.toLowerCase(),
+      price: parseInt(event.target.productPrice.value)
+    };
+
+    visibleProducts.push(newProduct);
+
+    console.log(newProduct);
+
+    setShowProducts(true);
+  };
+
   return (
     <div className='App flex'>
       <nav className='flex'>
-        <button className='flex'>Home</button>
-        <button className='flex' onClick={createProduct}>
+        <button className='flex' onClick={toggleShowProducts}>
+          Home
+        </button>
+        <button className='flex' onClick={toggleShowProducts}>
           Create Product
         </button>
       </nav>
@@ -59,7 +79,7 @@ function App() {
         {showProducts ? (
           <List products={visibleProducts} />
         ) : (
-          <CreateProductPage />
+          <CreateProductPage onSubmit={handleFormSubmit} />
         )}
       </main>
     </div>

@@ -6,7 +6,7 @@ const ListItem = ({ id, name, category, price }) => {
         <p>{category}</p>
         <p>{`£${price / 100}`}</p>
       </div>
-      <button className='listItemButton'>More</button>
+      <button className='blueButton listItemButton'>More</button>
     </article>
   );
 };
