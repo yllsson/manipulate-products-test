@@ -26,14 +26,6 @@ function App() {
     setFilter(event.target.value);
   };
 
-  const toggleShowProducts = () => {
-    if (showProducts) {
-      setShowProducts(false);
-    } else {
-      setShowProducts(true);
-    }
-  };
-
   const handleFormSubmit = (event) => {
     event.preventDefault();
 
@@ -46,18 +38,26 @@ function App() {
 
     visibleProducts.push(newProduct);
 
-    console.log(newProduct);
-
     setShowProducts(true);
   };
 
   return (
     <div className='App flex'>
       <nav className='flex'>
-        <button className='flex' onClick={toggleShowProducts}>
+        <button
+          className='flex'
+          onClick={() => {
+            setShowProducts(true);
+          }}
+        >
           Home
         </button>
-        <button className='flex' onClick={toggleShowProducts}>
+        <button
+          className='flex'
+          onClick={() => {
+            setShowProducts(false);
+          }}
+        >
           Create Product
         </button>
       </nav>
@@ -77,7 +77,10 @@ function App() {
         </section>
 
         {showProducts ? (
-          <List products={visibleProducts} />
+          <List
+            products={visibleProducts}
+            setVisibleProducts={setVisibleProducts}
+          />
         ) : (
           <CreateProductPage onSubmit={handleFormSubmit} />
         )}

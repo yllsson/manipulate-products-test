@@ -1,7 +1,13 @@
 import React from 'react';
 import ListItem from './ListItem';
 
-const List = ({ products }) => {
+const List = ({ products, setVisibleProducts }) => {
+  const showSimilarProducts = (price) => {
+    let similarProducts = products.sort((a, b) => a.price - b.price);
+    console.log(similarProducts);
+    setVisibleProducts(similarProducts);
+  };
+
   return (
     <div className='list flex'>
       {products.map(({ id, name, category, price }) => {
@@ -12,6 +18,7 @@ const List = ({ products }) => {
             category={category}
             price={price}
             key={id}
+            onClick={showSimilarProducts}
           />
         );
       })}
